@@ -1,0 +1,15 @@
+# Found on Magnum masters
+
+--service-account-key-file=/etc/kubernetes/certs/service_account.key
+
+# Valid flags
+
+--label kubeapi_options='--service-account-signing-key-file=/etc/kubernetes/certs/service_account_private.key --service-account-issuer=kubernetes.default.svc'
+
+#### Note
+/etc/kubernetes/certs/server.key isn't valid for this use
+
+# Magunum options https://docs.openstack.org/magnum/latest/user/index.html#kubernetes
+
+> kubeapi_options
+This label can hold any additional options to be passed to the kube api server. For more details, refer to the kube api admin guide. By default no additional options are passed.

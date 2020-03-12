@@ -88,8 +88,7 @@ spec:
         #value: https://auth.cern.ch/auth
         value: https://auth.cern.ch/auth/realms/cern
       - name: oidc_redirect_uri
-        value: /login/oidc
-        # https://kosamara-kf2-svcacc-privkey-hjimhjk2qyyr-node-0.cern.ch:31549/login/oidc
+        value: https://kosamara-kf2-svcacc-privkey-hjimhjk2qyyr-node-0.cern.ch:31380/login/oidc
       # oidc_auth_url overrides the default Endpoint given by the OIDC_PROVIDER.
       # According to the authzsvc examples, it shouldn't be set
       #- name: oidc_auth_url

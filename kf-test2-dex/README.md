@@ -1,0 +1,1 @@
+- Put OIDC client secret in `kustomize/oidc-authservice$/base/params.env`

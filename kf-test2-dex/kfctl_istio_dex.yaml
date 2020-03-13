@@ -92,6 +92,8 @@ spec:
       #  value: /auth/realms/cern/protocol/openid-connect/auth
       - name: oidc_redirect_uri
         value: https://kosamara-kf2-svcacc-privkey-hjimhjk2qyyr-node-0.cern.ch:31390/login/oidc
+      - name: redirect_url
+        value: https://kosamara-kf2-svcacc-privkey-hjimhjk2qyyr-node-0.cern.ch:31390/login/oidc
       - name: client_id
         value: kf-test-brainhack
       repoRef:

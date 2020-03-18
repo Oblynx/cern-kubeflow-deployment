@@ -1,0 +1,17 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: haproxy
+spec:
+  selector:
+    deployment: haproxy
+  type: ClusterIP
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+    name: tcp-80
+  - protocol: TCP
+    port: 8443
+    targetPort: 8443
+    name: tcp-443

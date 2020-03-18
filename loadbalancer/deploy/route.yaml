@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Route
+metadata:
+  annotations:
+    router.cern.ch/network-visibility: Internet
+  name: haproxy
+spec:
+  host: test-kfsso2.web.cern.ch
+  port:
+    targetPort: tcp-443
+  tls:
+    #insecureEdgeTerminationPolicy: Redirect
+    termination: passthrough
+  to:
+    kind: Service
+    name: haproxy
+---
+apiVersion: v1
+kind: Route
+metadata:
+  annotations:
+    router.cern.ch/network-visibility: Internet
+  name: haproxy-wellknown
+spec:
+  host: test-kfsso2.web.cern.ch
+  path: "/.well-known"
+  port:
+    targetPort: tcp-80
+  to:
+    kind: Service
+    name: haproxy

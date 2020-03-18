@@ -1,0 +1,10 @@
+commonLabels:
+  app: kfsso-proxy
+resources:
+- deployment.yaml
+- svc.yaml
+- route.yaml
+configMapGenerator:
+- name: haproxy-cfg
+  files:
+    - haproxy.cfg

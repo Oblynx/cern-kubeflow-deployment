@@ -4,12 +4,11 @@ metadata:
   name: istio-ingressgateway-certs
   namespace: istio-system
 spec:
-  commonName: istio-ingressgateway.istio-system.svc
+  commonName: test-kfsso2.web.cern.ch
   # Use dnsNames if your LoadBalancer issues a hostname (eg on AWS)
   dnsNames:
-  - kosamara-kf2-svcacc-privkey-hjimhjk2qyyr-node-0
-  isCA: true
+  - test-kfsso2.web.cern.ch
   issuerRef:
     kind: ClusterIssuer
-    name: kubeflow-self-signing-issuer
+    name: letsencrypt-prod
   secretName: istio-ingressgateway-certs

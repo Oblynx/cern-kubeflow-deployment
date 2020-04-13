@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: haproxy
-        image: gitlab-registry.cern.ch/kosamara/kfsso-proxy:haproxy-alpine
+        image: gitlab-registry.cern.ch/kosamara/kubeflow-experiments:haproxy-alpine
         imagePullPolicy: "Always"
         ports:
         - name: tcp-80

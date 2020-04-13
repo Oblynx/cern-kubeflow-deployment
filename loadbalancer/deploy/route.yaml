@@ -23,7 +23,7 @@ metadata:
   name: haproxy-wellknown
 spec:
   host: test-kfsso2.web.cern.ch
-  path: "/.well-known"
+  path: "/.well-known/acme-challenge"
   port:
     targetPort: tcp-80
   to:

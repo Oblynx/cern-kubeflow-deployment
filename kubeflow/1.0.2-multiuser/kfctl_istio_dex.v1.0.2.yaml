@@ -1,9 +1,7 @@
 apiVersion: kfdef.apps.kubeflow.org/v1
 kind: KfDef
 metadata:
-  clusterName: kosamara-kf2-svcacc-privkey
-  creationTimestamp: null
-  name: kf-test2-dex
+  name: 102-multiuser
   namespace: kubeflow
 spec:
   applications:
@@ -44,6 +42,8 @@ spec:
         path: istio-1-3-1/cluster-local-gateway-1-3-1
     name: cluster-local-gateway
   - kustomizeConfig:
+      overlays:
+      - https-gateway
       parameters:
       - name: clusterRbacConfig
         value: "ON"
@@ -94,15 +94,13 @@ spec:
       - name: oidc_provider
         value: https://auth.cern.ch/auth/realms/cern
       - name: oidc_redirect_uri
-        value: https://test-kfsso2.web.cern.ch/login/oidc
+        value: https://kf-authz-demo3.web.cern.ch/login/oidc
       - name: redirect_url
-        value: https://test-kfsso2.web.cern.ch/login/oidc
+        value: https://kf-authz-demo3.web.cern.ch/login/oidc
       - name: skip_auth_uri
         value: /.well-known/acme-challenge
       - name: client_id
         value: kf-test-brainhack
-      - name: client_secret
-        value: SECRET
       repoRef:
         name: manifests
         path: istio/oidc-authservice
@@ -360,9 +358,5 @@ spec:
     name: seldon-core-operator
   repos:
   - name: manifests
-    uri: https://github.com/kubeflow/manifests/archive/v1.0.0.tar.gz
-  version: v1.0.0
-status:
-  reposCache:
-  - localPath: '".cache/manifests/manifests-1.0.0"'
-    name: manifests
+    uri: https://github.com/kubeflow/manifests/archive/v1.0-branch.tar.gz
+  version: v1.0.2

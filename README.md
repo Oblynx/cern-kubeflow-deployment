@@ -21,16 +21,19 @@ From zero to kubeflow at CERN
 1. Enable the default storage class `geneva-cephfs-testing`
    - `kubectl patch storageclass geneva-cephfs-testing -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`
 1. Pick a DNS name `<SITENAME>` for the deployment and [register an Application + OIDC at the resource portal](notes/application-registration.md)
-1. Deploy the templates in [kubeflow](kubeflow) (see README in each deployment for customizable parameters)
+1. Follow [the instructions](kubeflow/README.md) to deploy the templates in [kubeflow](kubeflow) 
 1. [Create a CERN website](https://webservices.web.cern.ch/webservices/Services/CreateNewSite/Default.aspx) to expose the deployment to the world
    - name: the same used for the SSO registration
    - official, PaaS application
    - verify that CERN SSO has been set up correctly
    - expose Kubeflow to the internet: `https://webservices.web.cern.ch/webservices/Tools/Permissions/?SiteName=<SITENAME>`
 
-
 ### CERN integration notes
 
 This deployment is integrated with the CERN SSO.
 
 Kubeflow's Istio is configured with Let's Encrypt TLS certs.
+
+### Resources
+
+- [Understand Istio ingress](https://blog.jayway.com/2018/10/22/understanding-istio-ingress-gateway-in-kubernetes/)

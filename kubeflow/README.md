@@ -1,5 +1,7 @@
 # Kubeflow deployment
 
+The dirs here are different deployment configs; pick one.
+
 1. Change kfdef if needed
 1. `kfctl build -f kfctl_istio_dex.v1.0.2.yaml`
 1. Change generated manifests

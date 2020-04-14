@@ -1,3 +1,0 @@
-- Put OIDC client secret in `kustomize/oidc-authservice$/base/params.env`
-- [The Gateway patch should apply automatically]
-- `kc create -f istio-ingressgateway-certs.yaml`

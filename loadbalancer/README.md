@@ -1,3 +1,0 @@
-haproxy LB SSL PASSTHROUGH
----
-

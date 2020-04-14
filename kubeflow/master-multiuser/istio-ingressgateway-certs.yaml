@@ -4,10 +4,10 @@ metadata:
   name: istio-ingressgateway-certs
   namespace: istio-system
 spec:
-  commonName: test-kfsso2.web.cern.ch
+  commonName: kf-authz-demo3.web.cern.ch
   # Use dnsNames if your LoadBalancer issues a hostname (eg on AWS)
   dnsNames:
-  - test-kfsso2.web.cern.ch
+  - kf-authz-demo3.web.cern.ch
   issuerRef:
     kind: ClusterIssuer
     name: letsencrypt-prod

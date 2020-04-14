@@ -3,7 +3,7 @@ commonLabels:
 resources:
 - deployment.yaml
 - svc.yaml
-- route.yaml
+  #- route.yaml
 configMapGenerator:
 - name: haproxy-cfg
   files:

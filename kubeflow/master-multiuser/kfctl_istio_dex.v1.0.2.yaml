@@ -68,8 +68,8 @@ spec:
     name: cert-manager-kube-system-resources
   - kustomizeConfig:
       overlays:
-      #- self-signed
       - letsencrypt
+      - self-signed
       - application
       parameters:
       - name: namespace
@@ -93,9 +93,9 @@ spec:
       - name: oidc_provider
         value: https://auth.cern.ch/auth/realms/cern
       - name: oidc_redirect_uri
-        value: https://test-kfsso2.web.cern.ch/login/oidc
+        value: https://kf-authz-demo3.web.cern.ch/login/oidc
       - name: redirect_url
-        value: https://test-kfsso2.web.cern.ch/login/oidc
+        value: https://kf-authz-demo3.web.cern.ch/login/oidc
       - name: skip_auth_uri
         value: /.well-known/acme-challenge
       - name: client_id

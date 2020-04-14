@@ -22,7 +22,6 @@ From zero to kubeflow at CERN
    - `kubectl patch storageclass geneva-cephfs-testing -p '{"metadata": {"annotations":{"storageclass.kubernetes.io/is-default-class":"true"}}}'`
 1. Pick a DNS name `<SITENAME>` for the deployment and [register an Application + OIDC at the resource portal](notes/application-registration.md)
 1. Deploy the templates in [kubeflow](kubeflow) (see README in each deployment for customizable parameters)
-   - Add the OIDC client credentials 
 1. [Create a CERN website](https://webservices.web.cern.ch/webservices/Services/CreateNewSite/Default.aspx) to expose the deployment to the world
    - name: the same used for the SSO registration
    - official, PaaS application

@@ -12,7 +12,6 @@
 ### cert-manager
 
        overlays:
--      - self-signed
 +      - letsencrypt
        parameters:
 +      - name: acmeEmail
